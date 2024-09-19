@@ -1,9 +1,8 @@
 #+title: Girard Davila
 #+OPTIONS: toc:nil
+#+OPTIONS: html-postamble:nil
 
-* Links
-
-** Sawadee Ka
+* Sawadee Ka
 
 Travel blog, private Signal group, new members need approval:
 
