@@ -50,7 +50,7 @@ jobs:
             --minify \
             --baseURL "https://girard-davila.net/"
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+        uses: JamesIves/github-pages-deploy-action@v4.6.9
         with:
           branch: gh-pages
           folder: public
