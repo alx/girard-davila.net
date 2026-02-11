@@ -1,0 +1,61 @@
+{{ define "main" }}
+<div class="max-w-5xl mx-auto px-6 lg:px-8 py-16">
+    <!-- Header -->
+    <header class="mb-16">
+        <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">{{ .Title }}</h1>
+        {{ with .Params.description }}
+        <p class="text-xl text-gray-600 leading-relaxed max-w-3xl">{{ . }}</p>
+        {{ end }}
+        {{ with .Content }}
+        <div class="prose prose-lg text-gray-600 mt-6">
+            {{ . }}
+        </div>
+        {{ end }}
+    </header>
+
+    <!-- Reviews Grid -->
+    {{ $reviews := where .Site.RegularPages "Section" "airbnb" }}
+    {{ if gt (len $reviews) 0 }}
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {{ range $reviews }}
+        <article class="bg-white border border-gray-200 rounded-lg p-8 hover:border-gray-300 transition-colors duration-200">
+            <div class="mb-4">
+                <h2 class="text-3xl font-semibold text-gray-900 mb-2">
+                    <a href="{{ .Permalink }}" class="hover:text-blue-600 transition-colors duration-200">
+                        {{ .Title }}
+                    </a>
+                </h2>
+                {{ with .Params.property_name }}
+                <p class="text-lg text-gray-600 mb-2">{{ . }}</p>
+                {{ end }}
+                <div class="flex flex-wrap gap-3 text-sm text-gray-500 mb-4">
+                    {{ with .Params.location }}
+                    <span>📍 {{ . }}</span>
+                    {{ end }}
+                    {{ with .Params.date }}
+                    <span>📅 {{ dateFormat "Jan 2006" . }}</span>
+                    {{ end }}
+                </div>
+                {{ with .Params.overall_rating }}
+                <div class="flex items-center mb-4">
+                    <span class="text-3xl font-bold text-gray-900 mr-2">{{ . }}</span>
+                    <span class="text-gray-500">/ 5</span>
+                </div>
+                {{ end }}
+                {{ with .Params.description }}
+                <p class="text-base text-gray-600 leading-relaxed mb-4">{{ . }}</p>
+                {{ end }}
+            </div>
+            <a href="{{ .Permalink }}" class="inline-block text-gray-900 font-medium hover:text-blue-600 transition-colors duration-200">
+                Read full review →
+            </a>
+        </article>
+        {{ end }}
+    </div>
+    {{ else }}
+    <div class="text-center py-16">
+        <p class="text-xl text-gray-600">No reviews yet. Check back soon!</p>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

@@ -1,4 +1,18 @@
 baseURL: https://girard-davila.net/
 languageCode: en-us
-title: Girard Davila
-theme: ["PaperMod"]
+title: Girard Davila - Innovative Open Source Solutions
+
+params:
+  description: "Cutting-edge open source projects in Python and JavaScript"
+  keywords: ["open source", "Python", "JavaScript", "web development", "AI", "computer vision", "machine learning"]
+  author:
+    name: Alexandre Girard Davila
+    email: alx.girard@tutanota.com
+  social:
+    github: "https://github.com/alx"
+    linkedin: "https://www.linkedin.com/in/alxgirard/"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
