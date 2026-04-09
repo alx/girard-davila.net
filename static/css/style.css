@@ -95,3 +95,73 @@ body {
         scroll-behavior: auto;
     }
 }
+
+/* Airbnb Review Content Readability Improvements */
+.prose.prose-lg {
+  /* Improve base line height for better readability */
+  line-height: 1.8;
+}
+
+.prose.prose-lg h2 {
+  /* Add substantial top margin to separate sections */
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  /* Add subtle border for visual separation */
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  /* Increase section title size */
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.prose.prose-lg h2:first-of-type {
+  /* Remove border from first section (Overview) */
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.prose.prose-lg p {
+  /* Increase paragraph spacing */
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose.prose-lg ul {
+  /* Add spacing around lists */
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose.prose-lg li {
+  /* Increase list item spacing */
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  /* Ensure bullet points are visible */
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-left: 1.5rem;
+}
+
+.prose.prose-lg strong {
+  /* Ensure bold text stands out for better scanning */
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .prose.prose-lg {
+    line-height: 1.75;
+  }
+
+  .prose.prose-lg h2 {
+    margin-top: 2rem;
+    padding-top: 1.25rem;
+  }
+
+  .prose.prose-lg p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
