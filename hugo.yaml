@@ -1,12 +1,12 @@
 baseURL: https://girard-davila.net/
 languageCode: en-us
-title: Alex Girard — AI Engineer & Open Source Builder
+title: Girard-Davila.net — Innovative Open Source Solutions
 
 params:
-  description: "AI engineer building sovereign, local-first tools. Based in Koh Samui, Thailand."
-  keywords: ["AI engineer", "local AI", "sovereign AI", "open source", "NanoClaw", "Python", "TypeScript"]
+  description: "Innovative open source solutions in Python and JavaScript. Based in Koh Samui, Thailand."
+  keywords: ["open source", "AI", "Python", "JavaScript", "Koh Samui", "NanoClaw", "JoliGEN", "software development"]
   author:
-    name: Alex Girard
+    name: Girard-Davila
     email: girard.davila@gmail.com
   social:
     github: "https://github.com/alx"
