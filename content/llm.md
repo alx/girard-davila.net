@@ -37,10 +37,10 @@ hideHeader: true
             <span class="w-3 h-3 rounded-full bg-red-400"></span>
             <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
             <span class="w-3 h-3 rounded-full bg-green-400"></span>
-            <span class="ml-2 text-xs text-gray-400 font-mono">pi — litellm/qwen3.8-coder</span>
+            <span class="ml-2 text-xs text-gray-400 font-mono">pi — girard/qwen3.8-coder</span>
         </div>
-<pre class="p-5 text-sm leading-relaxed font-mono text-gray-100 overflow-x-auto"><span class="text-gray-500">$</span> pi --model litellm/qwen3.8-coder
-<span class="text-gray-400">◆ using model "litellm/qwen3.8-coder" · api.girard-davila.net</span>
+<pre class="p-5 text-sm leading-relaxed font-mono text-gray-100 overflow-x-auto"><span class="text-gray-500">$</span> pi --model girard/qwen3.8-coder
+<span class="text-gray-400">◆ using model "girard/qwen3.8-coder" · api.girard-davila.net</span>
 
 &gt; summarize the git log of this repo in one line
 
@@ -100,9 +100,8 @@ hideHeader: true
 <pre><code>pi install npm:pi-provider-litellm                  # provider + SSO support
 pi install git:github.com/alx/pi-provider-girard    # the /girard preset</code></pre>
 <p>Then inside Pi:</p>
-<pre><code>/girard            # writes the endpoint into your Pi settings
-/login litellm     # opens the SSO URL → browser → key stored
-/model litellm/qwen3.8-coder</code></pre>
+<pre><code>/girard            # registers the endpoint + prints your connect steps
+/model girard/qwen3.8-coder</code></pre>
 <h3>3. Top up (when billing launches)</h3>
 <p>Pick a credit pack at checkout; your existing key keeps working, spend limits included. Nothing to re-install, nothing to re-authenticate.</p>
 </div>
