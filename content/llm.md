@@ -75,32 +75,63 @@ hideHeader: true
 
 ## Join in three steps {#join}
 
-### 1. Create an account
+<div class="not-prose my-6">
+<form id="join-form" class="max-w-md mx-auto bg-white border border-gray-200 rounded-2xl p-6 shadow-sm text-left">
+<p class="text-sm text-gray-600 mb-4">Leave your details to unlock the three steps below — and get on the list when billing launches.</p>
+<input type="website" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+<div class="mb-4"><label for="jf-name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+<input id="jf-name" name="name" type="text" autocomplete="name" required class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"></div>
+<div class="mb-4"><label for="jf-email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+<input id="jf-email" name="email" type="email" autocomplete="email" required class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"></div>
+<div class="mb-4"><label for="jf-msg" class="block text-sm font-medium text-gray-700 mb-1">What are you building? <span class="text-gray-400 font-normal">(optional)</span></label>
+<input id="jf-msg" name="message" type="text" class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"></div>
+<div class="flex items-center gap-3 flex-wrap">
+<button type="submit" class="px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-500">Unlock the steps</button>
+<span id="join-status" class="text-sm text-gray-500" role="status"></span>
+</div>
+</form>
+</div>
+<p id="join-chip" class="hidden not-prose max-w-md mx-auto my-6 text-sm text-center text-indigo-700 bg-indigo-50 border border-indigo-100 rounded-full px-4 py-2">You are on the list — steps unlocked below. <button id="join-reset" class="underline">not you?</button></p>
 
-Sign in with GitHub at
-**<a class="text-indigo-600 underline decoration-indigo-200 underline-offset-2" href="https://api.girard-davila.net/api/llm/sso/key/generate">api.girard-davila.net</a>**.
-The SSO round-trip issues your personal **virtual key** automatically —
-no email verification dance, no manual key creation.
-
-### 2. Connect Pi
-
-```bash
-pi install npm:pi-provider-litellm                  # provider + SSO support
-pi install git:github.com/alx/pi-provider-girard    # the /girard preset
-```
-
-Then inside Pi:
-
-```
-/girard            # writes the endpoint into your Pi settings
+<div id="join-steps" hidden>
+<h3>1. Create an account</h3>
+<p>Sign in with GitHub at <a class="text-indigo-600 underline decoration-indigo-200 underline-offset-2" href="https://api.girard-davila.net/api/llm/sso/key/generate">api.girard-davila.net</a>. The SSO round-trip issues your personal <strong>virtual key</strong> automatically — no email verification dance, no manual key creation.</p>
+<h3>2. Connect Pi</h3>
+<pre><code>pi install npm:pi-provider-litellm                  # provider + SSO support
+pi install git:github.com/alx/pi-provider-girard    # the /girard preset</code></pre>
+<p>Then inside Pi:</p>
+<pre><code>/girard            # writes the endpoint into your Pi settings
 /login litellm     # opens the SSO URL → browser → key stored
-/model litellm/qwen3.8-coder
-```
+/model litellm/qwen3.8-coder</code></pre>
+<h3>3. Top up (when billing launches)</h3>
+<p>Pick a credit pack at checkout; your existing key keeps working, spend limits included. Nothing to re-install, nothing to re-authenticate.</p>
+</div>
 
-### 3. Top up (when billing launches)
-
-Pick a credit pack at checkout; your existing key keeps working, spend
-limits included. Nothing to re-install, nothing to re-authenticate.
+<script>
+(function(){
+var K="girard_llm_joined",E="https://formspree.io/p/3100741512619621923/f/joinLlm";
+var steps=document.getElementById("join-steps"),form=document.getElementById("join-form"),
+chip=document.getElementById("join-chip"),status=document.getElementById("join-status"),
+reset=document.getElementById("join-reset"),wrap=form?form.parentElement:null;
+function unlocked(){steps.hidden=false;if(chip)chip.hidden=false;if(wrap)wrap.style.display="none";}
+function locked(){steps.hidden=true;if(chip)chip.hidden=true;if(wrap)wrap.style.display="";}
+try{if(localStorage.getItem(K))unlocked();}catch(e){}
+if(reset)reset.onclick=function(){try{localStorage.removeItem(K);}catch(e){}locked();};
+if(!form)return;
+form.onsubmit=async function(ev){
+ev.preventDefault();
+var el=form.elements,n=el["name"].value.trim(),em=el["email"].value.trim(),ms=el["message"].value.trim();
+if(!n||!em){status.textContent="Name and email are required.";return;}
+status.textContent="Sending…";
+try{
+var r=await fetch(E,{method:"POST",mode:"cors",headers:{"Content-Type":"application/json","Accept":"application/json","Formspree-Client":"girard-landing"},body:JSON.stringify({name:n,email:em,message:ms,_replyto:em})});
+var d={};try{d=await r.json();}catch(e2){}
+if(r.ok&&d.ok){try{localStorage.setItem(K,"1");}catch(e2){}status.textContent="You are in.";unlocked();}
+else{status.textContent=(d&&(d.message||d.error))||"Something went wrong, please try again.";}
+}catch(e2){status.textContent="Network error — please try again.";}
+};
+})();
+</script>
 
 ## Honest specs
 
