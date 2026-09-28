@@ -14,13 +14,7 @@ hideHeader: true
             Blazing-Fast, Ultra-Cheap LLM Infrastructure<br class="hidden md:block"/>
             <span class="text-indigo-600">Built for Pi Agents</span>
         </h1>
-        <p class="text-lg md:text-xl text-gray-600 mb-8">
-            A self-hosted <strong>Qwen3.8-Coder-27B</strong> on a dedicated RTX&nbsp;3090, served through a
-            LiteLLM endpoint with GitHub sign-in, virtual keys, and exact
-            cost-plus token pricing. No cloud markups, no queue — just fast,
-            cheap completions for your agent.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <div class="flex flex-col sm:flex-row gap-3 justify-center mt-2">
             <a href="#join" class="px-6 py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition-colors shadow-sm">
                 Get your key — free in beta
             </a>
@@ -49,29 +43,6 @@ hideHeader: true
   <span class="text-gray-500">(1.2s · 384 tok · $0.0009)</span></pre>
     </div>
 </div>
-
-## Why agents on this endpoint
-
-- **Fast where it counts.** The whole box is one model on one GPU — no shared
-  cloud queue, no multi-tenant noise. Speculative (MTP) decoding on top.
-- **Priced at cost.** Credit packs are billed at exact hardware/electricity
-  cost-plus. There is no inference gross margin hiding in your token bill.
-- **Cache-aware.** Prompt caching at the proxy layer means long,
-  repetitive agent contexts stop paying full price for the prefix.
-- **Yours to lose.** Self-hosted, small, and boring on purpose. Your key,
-  your spend, your rate limits — all visible in the LiteLLM UI.
-
-## How token billing works {#billing}
-
-1. **Buy a credit pack** (Stripe) — e.g. `$5 → 500k tokens` at the pack's
-   fixed rate. Packs never expire while the account is in good standing.
-2. **Spend is metered per token** on your virtual key — input + output, at
-   the published rate, with caching discounts applied automatically.
-3. **You see everything** in the dashboard: spend per model, per key, per day.
-   Hard spend caps are enforced, not advisory.
-
-> **Beta:** while we're in beta, new accounts get free credits — no card
-> required. Stripe top-ups go live with the public launch.
 
 ## Join in three steps {#join}
 
@@ -132,6 +103,28 @@ else{status.textContent=(d&&(d.message||d.error))||"Something went wrong, please
 })();
 </script>
 
+## Why agents on this endpoint
+
+- **Fast where it counts.** The whole box is one model on one GPU — no shared
+  cloud queue, no multi-tenant noise. Speculative (MTP) decoding on top.
+- **Priced at cost.** Credit packs are billed at exact hardware/electricity
+  cost-plus. There is no inference gross margin hiding in your token bill.
+- **Cache-aware.** Prompt caching at the proxy layer means long,
+  repetitive agent contexts stop paying full price for the prefix.
+- **Yours to lose.** Self-hosted, small, and boring on purpose. Your key,
+  your spend, your rate limits — all visible in the LiteLLM UI.
+
+## How token billing works {#billing}
+
+1. **Buy a credit pack** (Stripe) — e.g. `$5 → 500k tokens` at the pack's
+   fixed rate. Packs never expire while the account is in good standing.
+2. **Spend is metered per token** on your virtual key — input + output, at
+   the published rate, with caching discounts applied automatically.
+3. **You see everything** in the dashboard: spend per model, per key, per day.
+   Hard spend caps are enforced, not advisory.
+
+> **Beta:** while we're in beta, new accounts get free credits — no card
+> required. Stripe top-ups go live with the public launch.
 ## Honest specs
 
 | | |
