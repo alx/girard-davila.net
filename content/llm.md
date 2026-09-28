@@ -2,9 +2,10 @@
 title: "LLM API for Pi Agents"
 description: "Blazing-fast, ultra-cheap LLM infrastructure built for Pi agents. Self-hosted Qwen3.8-Coder-27B behind a LiteLLM endpoint — GitHub sign-in, credit packs, exact cost-plus pricing."
 weight: 1
+hideHeader: true
 ---
 
-<div class="not-prose -mt-12 mb-12">
+<div class="not-prose mt-4 mb-12">
     <div class="max-w-3xl mx-auto text-center py-8">
         <p class="inline-block mb-4 px-3 py-1 rounded-full text-xs font-semibold tracking-wide text-indigo-700 bg-indigo-50 border border-indigo-100">
             api.girard-davila.net — now in beta

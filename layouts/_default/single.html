@@ -2,6 +2,7 @@
 <div class="pt-20 pb-16 bg-white min-h-screen">
     <div class="max-w-4xl mx-auto px-6 lg:px-8">
         <article class="prose prose-lg max-w-none">
+            {{ if not .Params.hideHeader }}
             <header class="mb-8">
                 <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{{ .Title }}</h1>
                 {{ if .Params.description }}
@@ -15,6 +16,7 @@
                 </div>
                 {{ end }}
             </header>
+            {{ end }}
             
             <div class="content">
                 {{ .Content }}
