@@ -113,8 +113,8 @@ var K="girard_llm_joined",E="https://formspree.io/p/3100741512619621923/f/joinLl
 var steps=document.getElementById("join-steps"),form=document.getElementById("join-form"),
 chip=document.getElementById("join-chip"),status=document.getElementById("join-status"),
 reset=document.getElementById("join-reset"),wrap=form?form.parentElement:null;
-function unlocked(){steps.hidden=false;if(chip)chip.hidden=false;if(wrap)wrap.style.display="none";}
-function locked(){steps.hidden=true;if(chip)chip.hidden=true;if(wrap)wrap.style.display="";}
+function unlocked(){steps.hidden=false;if(chip)chip.classList.remove("hidden");if(wrap)wrap.style.display="none";}
+function locked(){steps.hidden=true;if(chip)chip.classList.add("hidden");if(wrap)wrap.style.display="";}
 try{if(localStorage.getItem(K))unlocked();}catch(e){}
 if(reset)reset.onclick=function(){try{localStorage.removeItem(K);}catch(e){}locked();};
 if(!form)return;
