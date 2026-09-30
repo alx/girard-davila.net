@@ -1,0 +1,12 @@
+{
+  "forms": {
+    "joinLlm": {
+      "name": "LLM Endpoint - Join Form",
+      "fields": {
+        "name": { "type": "text", "required": true },
+        "email": { "type": "email", "required": true },
+        "message": { "type": "text" }
+      }
+    }
+  }
+}

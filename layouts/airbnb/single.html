@@ -1,0 +1,89 @@
+{{ define "main" }}
+<article class="max-w-4xl mx-auto px-6 lg:px-8 py-16">
+    <!-- Back Navigation -->
+    <div class="mb-8">
+        <a href="/airbnb/" class="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors duration-200">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Back to Reviews
+        </a>
+    </div>
+
+    <!-- Header -->
+    <header class="mb-12">
+        <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-4 tracking-tight">{{ .Title }}</h1>
+        {{ with .Params.property_name }}
+        <p class="text-2xl text-gray-600 mb-2">{{ . }}</p>
+        {{ end }}
+        <div class="flex flex-wrap gap-4 text-lg text-gray-500">
+            {{ with .Params.location }}
+            <span>📍 {{ . }}</span>
+            {{ end }}
+            {{ with .Params.date }}
+            <span>📅 {{ dateFormat "January 2006" . }}</span>
+            {{ end }}
+            {{ with .Params.host_name }}
+            <span>👤 Host: {{ . }}</span>
+            {{ end }}
+        </div>
+    </header>
+
+    <!-- Overall Rating -->
+    {{ with .Params.overall_rating }}
+    <div class="mb-12 p-8 bg-gray-50 border border-gray-200 rounded-lg">
+        <div class="text-center">
+            <div class="text-6xl font-bold text-gray-900 mb-2">{{ . }}</div>
+            <div class="text-xl text-gray-600">Overall Rating</div>
+        </div>
+    </div>
+    {{ end }}
+
+    <!-- Rating Grid -->
+    {{ with .Params.ratings }}
+    <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Ratings</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {{ range . }}
+            <div class="flex justify-between items-center p-4 bg-white border border-gray-200 rounded-lg">
+                <span class="text-lg font-medium text-gray-900">{{ .category }}</span>
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-gray-900 mr-2">{{ .score }}</span>
+                    <span class="text-gray-500">/ 5</span>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+
+    <!-- Review Content -->
+    <div class="prose prose-lg max-w-none mb-12">
+        {{ .Content }}
+    </div>
+
+    <!-- Photo Gallery -->
+    {{ with .Params.photos }}
+    <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Photos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {{ range . }}
+            <div class="overflow-hidden rounded-lg border border-gray-200">
+                <img src="{{ . }}" alt="Review photo" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-200">
+            </div>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+
+    <!-- Footer Navigation -->
+    <div class="pt-8 border-t border-gray-200">
+        <a href="/airbnb/" class="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors duration-200">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Back to All Reviews
+        </a>
+    </div>
+</article>
+{{ end }}

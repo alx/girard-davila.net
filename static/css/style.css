@@ -1,0 +1,97 @@
+/* Custom styles for Alexandre Girard Davila's portfolio */
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation link hover effects */
+.nav-link {
+    position: relative;
+}
+
+/* Mobile navigation smooth transitions */
+.nav-link-mobile {
+    border-radius: 0.375rem;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f9fafb;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+/* Improved focus styles for accessibility */
+.focus\:ring-2:focus {
+    box-shadow: 0 0 0 2px rgba(107, 114, 128, 0.5);
+}
+
+/* Refined typography */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 3.5rem;
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+    }
+
+    header, footer {
+        display: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    section {
+        page-break-inside: avoid;
+    }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
