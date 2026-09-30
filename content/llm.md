@@ -68,10 +68,9 @@ hideHeader: true
 <h3>1. Create an account</h3>
 <p>Sign in with GitHub at <a class="text-indigo-600 underline decoration-indigo-200 underline-offset-2" href="https://api.girard-davila.net/api/llm/sso/key/generate">api.girard-davila.net</a>. The SSO round-trip issues your personal <strong>virtual key</strong> automatically — no email verification dance, no manual key creation.</p>
 <h3>2. Connect Pi</h3>
-<pre><code>pi install npm:pi-provider-litellm                  # provider + SSO support
-pi install git:github.com/alx/pi-provider-gd        # the /gd-register preset</code></pre>
+<pre><code>pi install git:github.com/alx/pi-provider-gd</code></pre>
 <p>Then inside Pi:</p>
-<pre><code>/gd-register     # registers the endpoint + prints your connect steps
+<pre><code>/login gd    # opens the browser → GitHub sign-in → key stored for you
 /model gd/Qwen3.8-27B-i1-IQ4_XS-GGUF-Smaller</code></pre>
 <h3>3. Top up (when billing launches)</h3>
 <p>Pick a credit pack at checkout; your existing key keeps working, spend limits included. Nothing to re-install, nothing to re-authenticate.</p>
