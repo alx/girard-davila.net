@@ -47,11 +47,14 @@ test.describe('Models landing page', () => {
       parseFloat(getComputedStyle(document.querySelector('.prose h2')).fontSize)
     );
     expect(h2size).toBeGreaterThan(16);
+    // Any typography-ruled thead proves the plugin loaded. (Not the *first*
+    // thead: the model-catalog tables sit in .not-prose wrappers by design,
+    // the Honest specs table is the prose one.)
     await page.waitForFunction(
-      () => {
-        const t = document.querySelector('thead');
-        return t && parseFloat(getComputedStyle(t).borderBottomWidth) >= 1;
-      },
+      () =>
+        Array.from(document.querySelectorAll('thead')).some(
+          (t) => parseFloat(getComputedStyle(t).borderBottomWidth) >= 1
+        ),
       null,
       { timeout: 15000 }
     );
