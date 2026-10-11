@@ -86,9 +86,9 @@ test.describe('Models landing page', () => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto(URL, { waitUntil: 'load' });
 
-    // Gated initial state.
+    // Initial state: steps always visible; form shown; chip hidden until join.
     await expect(page.locator('#join-form')).toBeVisible();
-    await expect(page.locator('#join-steps')).toBeHidden();
+    await expect(page.locator('#join-steps')).toBeVisible();
     await expect(page.locator('#join-chip')).toBeHidden();
 
     // Submit the form.
@@ -109,10 +109,10 @@ test.describe('Models landing page', () => {
     await expect(page.locator('#join-chip')).toBeVisible();
     await expect(page.locator('#join-form')).toBeHidden();
 
-    // Reset link re-locks for re-testing.
+    // Reset link re-locks for re-testing (steps stay visible).
     await page.click('#join-reset');
     await expect(page.locator('#join-form')).toBeVisible();
-    await expect(page.locator('#join-steps')).toBeHidden();
+    await expect(page.locator('#join-steps')).toBeVisible();
   });
 
   test('no horizontal scroll at mobile width after unlock', async ({ page }) => {
