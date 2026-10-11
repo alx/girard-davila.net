@@ -138,3 +138,5 @@ else{status.textContent=(d&&(d.message||d.error))||"Something went wrong, please
 | Limits | Per-key RPM and spend caps, configurable |
 
 Questions or want a bigger key budget? <a class="text-indigo-600 underline decoration-indigo-200 underline-offset-2" href="mailto:girard.davila@gmail.com">girard.davila@gmail.com</a>.
+
+By using the service you agree to our <a href="/privacy/" class="text-indigo-600 underline">Privacy Policy</a>.
