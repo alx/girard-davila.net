@@ -35,6 +35,7 @@ jobs:
         working-directory: test
         run: npm ci
       - name: Install Chromium
+        working-directory: test
         run: npx playwright install --with-deps chromium
       - name: Validate build (landing page test suite)
         working-directory: test
