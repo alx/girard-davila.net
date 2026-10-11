@@ -1,14 +1,14 @@
-// Validation suite for the /llm/ landing page, run against the
-// production build (hugo --minify output in ../public) served by serve.js.
-// These are the same checks done live during the org-7y4 polish pass and
-// the Formspree join-form wiring. Formspree is stubbed: no real
+// Validation suite for the /models/ landing page (renamed from /llm/), run
+// against the production build (hugo --minify output in ../public) served by
+// serve.js. These are the same checks done live during the org-7y4 polish pass
+// and the Formspree join-form wiring. Formspree is stubbed: no real
 // submissions leave the test run.
 const { test, expect } = require('@playwright/test');
 
 const WIDTHS = [1440, 768, 375];
-const URL = '/llm/';
+const URL = '/models/';
 
-test.describe('LLM landing page', () => {
+test.describe('Models landing page', () => {
   test('no horizontal scroll, exactly one h1, at every width', async ({ page }) => {
     for (const w of WIDTHS) {
       await page.setViewportSize({ width: w, height: 900 });

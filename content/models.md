@@ -1,8 +1,10 @@
 ---
-title: "LLM API for Pi Agents"
+title: "Models API for Pi Agents"
 description: "Blazing-fast, ultra-cheap LLM infrastructure built for Pi agents. Self-hosted Qwen3.8-27B behind a LiteLLM endpoint — GitHub sign-in, credit packs, exact cost-plus pricing."
 weight: 1
 hideHeader: true
+aliases:
+  - "/llm/"
 ---
 
 <div class="not-prose mt-4 mb-12">

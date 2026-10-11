@@ -10,7 +10,7 @@ module.exports = defineConfig({
   },
   webServer: {
     command: 'node serve.js',
-    url: 'http://127.0.0.1:4173/llm/',
+    url: 'http://127.0.0.1:4173/models/',
     timeout: 15000,
     reuseExistingServer: true
   }
