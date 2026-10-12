@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T20:33:24Z",
+  "generated_at": "2026-10-12T05:30:37Z",
   "endpoint": "https://api.girard-davila.net/api/llm",
   "margin_pct": 20,
   "provider": "DeepInfra (api.deepinfra.com)",
@@ -359,19 +359,6 @@
       "blurb": "Dedicated RTX 3090 24 GB, single-tenant, IQ4_XS GGUF, MTP speculative decoding. Internal exploration team (beta).",
       "ctx": 131000,
       "ctx_s": "131K",
-      "price_in": 0,
-      "price_out": 0,
-      "internal": true,
-      "features": []
-    },
-    {
-      "name": "ornith-1.5-9b",
-      "alias": "ornith-1.5-9b",
-      "source": "self-hosted",
-      "category": "self-hosted",
-      "blurb": "Ornith-1.5-9B Q4_1 (Qwen3.5-9B derivative, RL post-trained for agentic reasoning) on an 8 GiB laptop GPU. Route: gd-free. Internal team (beta).",
-      "ctx": 80000,
-      "ctx_s": "80K",
       "price_in": 0,
       "price_out": 0,
       "internal": true,
