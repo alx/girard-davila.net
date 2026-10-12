@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T06:06:08Z",
+  "generated_at": "2026-10-12T09:46:44Z",
   "endpoint": "https://api.girard-davila.net/api/llm",
   "margin_pct": 20,
   "provider": "DeepInfra (api.deepinfra.com)",
@@ -356,7 +356,7 @@
       "alias": "qwen3.8-27b",
       "source": "self-hosted",
       "category": "self-hosted",
-      "blurb": "Dedicated RTX 3090 24 GB, single-tenant, IQ4_XS GGUF, MTP speculative decoding. Internal exploration team (beta).",
+      "blurb": "Dedicated single-tenant GPU \u2014 RTX 3090 24 GB (standard) or RTX 5090 32 GB (premium) \u2014 IQ4_XS GGUF, MTP speculative decoding. Internal exploration team (beta).",
       "ctx": 131000,
       "ctx_s": "131K",
       "price_in": 0,
