@@ -36,4 +36,4 @@ gen "recognition"  "museum gallery augmented reality computer vision floating an
 gen "joligen"      "generative art AI painting diffusion abstract colorful"
 gen "samui"        "tropical beach sunrise golden hour koh samui thailand"
 
-echo "✅ Done — images in $OUT/"
+echo "✅ Done - images in $OUT/"

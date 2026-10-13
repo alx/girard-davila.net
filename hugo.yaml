@@ -1,6 +1,6 @@
 baseURL: https://www.girard-davila.net/
 languageCode: en-us
-title: Girard-Davila.net — Innovative Open Source Solutions
+title: Girard-Davila.net - Innovative Open Source Solutions
 
 params:
   description: "Innovative open source solutions in Python and JavaScript. Based in Koh Samui, Thailand."
