@@ -54,18 +54,17 @@ aliases:
 - **Yours to lose.** Self-hosted, small, and boring on purpose. Your key, your spend, your rate limits - all visible in the dashboard.
 - **Talk to the human.** One person runs this infrastructure. Want to explore ideas, shape what comes next, or help keep the infra maintained? Reach Alexandre Girard directly - <a class="text-indigo-600 underline decoration-indigo-200 underline-offset-2" href="https://alexgirard.com">alexgirard.com</a>.
 
-## Join in three steps {#join}
+## Join in two steps {#join}
 
 <div id="join-steps">
-<h3>1. Create an account</h3>
-<p>Sign in with Google at <a class="text-indigo-600 underline decoration-indigo-200 underline-offset-2" href="https://api.girard-davila.net/api/llm/sso/key/generate">api.girard-davila.net</a>. The SSO round-trip issues your personal <strong>virtual key</strong> automatically - no email verification dance, no manual key creation.</p>
-<h3>2. Connect Pi</h3>
+<h3>1. Connect Pi</h3>
 <pre><code>pi install git:github.com/alx/pi-provider-gd</code></pre>
-<p>Then inside Pi:</p>
-<pre><code>/login gd    # opens the browser → Google sign-in → key stored for you
+<h3>2. Log in — pi creates your key for you</h3>
+<p>Run <code>/login gd</code> inside Pi: it opens SSO at <a class="text-indigo-600 underline decoration-indigo-200 underline-offset-2" href="https://api.girard-davila.net/api/llm/sso/key/generate">api.girard-davila.net</a>, you sign in, and your <strong>virtual key</strong> is issued and stored automatically — no separate account step, no email verification dance, no manual key creation.</p>
+<pre><code>/login gd    # opens the browser → sign in → key created + stored for you
 /model gd/deepseek-v4.1-flash</code></pre>
-<h3>3. Top up (when billing launches)</h3>
-<p>Pick a credit pack at checkout; your existing key keeps working, spend limits included. Nothing to re-install, nothing to re-authenticate.</p>
+
+<p class="text-sm text-gray-500 mt-4"><strong>Top up (when billing launches):</strong> pick a credit pack at checkout; your existing key keeps working, spend limits included. Nothing to re-install, nothing to re-authenticate.</p>
 </div>
 
 <div class="not-prose my-6">
