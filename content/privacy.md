@@ -9,7 +9,7 @@ _Effective: 2026-10-11 · This describes how the **api.girard-davila.net** LLM
 service (a LiteLLM proxy fronting self-hosted and deepinfra models) and the
 Girard-Davila open-source project pages handle personal data. It is a draft
 policy provided in good faith; review it and adapt it to your legal
-requirements (including the GDPR — RGPD) before relying on it as a formal
+requirements (including the GDPR - RGPD) before relying on it as a formal
 legal document._
 
 ## What we collect
@@ -55,5 +55,5 @@ required for sign-in and security. No advertising or cross-site tracking
 cookies are used.
 
 ## Contact
-**Girard-Davila** · <girard.davila@gmail.com> — for any privacy question or
+**Girard-Davila** · <girard.davila@gmail.com> - for any privacy question or
 request.
