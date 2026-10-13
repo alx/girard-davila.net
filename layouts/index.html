@@ -292,6 +292,42 @@
     </div>
 </section>
 
+<!-- Self-Hosted (beta) Quote Section -->
+<section id="selfhosted" class="py-24 border-t border-gray-200">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">Self-hosted GPU <span class="text-indigo-600 text-3xl md:text-4xl align-middle">(beta)</span></h2>
+        <p class="text-lg text-gray-500 mb-12 leading-relaxed max-w-xl">
+            A dedicated GPU running <code class="text-gray-700">qwen3.8-27b</code> for you alone —
+            on-demand, hourly cost-plus, automatic shutdown when idle. Limited beta slots; request a quote.
+        </p>
+
+        <form action="https://formspree.io/f/mwvwjlyy" method="POST" class="bg-white border border-gray-200 rounded-lg p-8">
+            <input type="hidden" name="_subject" value="Self-hosted (beta) quote request">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                    <input type="text" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input type="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700 mb-1">Company <span class="text-gray-400 font-normal">(optional)</span></label>
+                <input type="text" name="company" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
+            </div>
+            <div class="mb-6">
+                <label class="block text-sm font-medium text-gray-700 mb-1">What do you need?</label>
+                <textarea name="message" rows="4" required placeholder="Model, typical context size, expected volume, preferred schedule…" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-indigo-500 transition-colors">
+                <i class="fa-solid fa-paper-plane mr-2"></i>Request a Quote
+            </button>
+        </form>
+    </div>
+</section>
+
 <!-- Contact Section -->
 <section id="contact" class="py-24 bg-gray-50 border-t border-gray-200">
     <div class="max-w-3xl mx-auto px-6 lg:px-8">

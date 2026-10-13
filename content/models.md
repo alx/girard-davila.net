@@ -271,7 +271,7 @@ else{status.textContent=(d&&(d.message||d.error))||"Something went wrong, please
 <tr class="border-b border-gray-100 align-top">
 <td class="py-3 pr-4 w-[40%]"><code class="text-indigo-700">qwen3.8-27b</code><div class="text-xs text-gray-500 mt-1">Dedicated single-tenant GPU — RTX 3090 24 GB (standard) or RTX 5090 32 GB (premium) — IQ4_XS GGUF, MTP speculative decoding. Internal exploration team (beta).</div></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">131K</td>
-<td class="py-3 pr-4 text-right" colspan="2"><a href="/#contact" class="inline-block px-2 py-0.5 rounded-full text-xs font-semibold text-indigo-700 bg-indigo-50 border border-indigo-200 hover:bg-indigo-100 transition-colors">contact</a></td>
+<td class="py-3 pr-4 text-right" colspan="2"><a href="/#selfhosted" class="inline-block px-2 py-0.5 rounded-full text-xs font-semibold text-indigo-700 bg-indigo-50 border border-indigo-200 hover:bg-indigo-100 transition-colors">contact</a></td>
 <td class="py-3"></td>
 </tr>
 </tbody>
@@ -282,7 +282,7 @@ Models tagged <span class="inline-block px-1.5 py-0.5 rounded bg-gray-100 border
 Self-hosted routes are for the internal exploration team during beta.
 <strong>Prices are USD per 1M tokens</strong> and refresh automatically from DeepInfra.
 ⚠️ The self-hosted GPU is dedicated, but under load Qwen3.8 requests overflow to <strong>rented third-party <a class="text-indigo-600 underline decoration-indigo-200 underline-offset-2" href="https://vast.ai" rel="noopener">VAST.ai</a> capacity</strong>.
-Catalog generated 2026-10-12T09:46:44Z.</p>
+Catalog generated 2026-10-13T05:42:47Z.</p>
 <!-- MODEL-CATALOG:END -->
 
 
