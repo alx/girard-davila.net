@@ -32,7 +32,7 @@ test.describe('Models landing page', () => {
     }
   });
 
-  test('tailwind typography is active (h2 sized, thead ruled)', async ({
+  test('tailwind typography is active (h2 sized, prose links weighted)', async ({
     page
   }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
@@ -47,13 +47,13 @@ test.describe('Models landing page', () => {
       parseFloat(getComputedStyle(document.querySelector('.prose h2')).fontSize)
     );
     expect(h2size).toBeGreaterThan(16);
-    // Any typography-ruled thead proves the plugin loaded. (Not the *first*
-    // thead: the model-catalog tables sit in .not-prose wrappers by design,
-    // the Honest specs table is the prose one.)
+    // Typography also restyles prose links (font-weight 600). (The old
+    // thead-ruled check targeted the Honest specs table, removed in the
+    // 2026-10-13 reorg; model-catalog tables sit in .not-prose by design.)
     await page.waitForFunction(
       () =>
-        Array.from(document.querySelectorAll('thead')).some(
-          (t) => parseFloat(getComputedStyle(t).borderBottomWidth) >= 1
+        Array.from(document.querySelectorAll('.prose a')).some(
+          (a) => getComputedStyle(a).fontWeight === '600'
         ),
       null,
       { timeout: 15000 }

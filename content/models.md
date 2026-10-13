@@ -46,6 +46,14 @@ aliases:
     </div>
 </div>
 
+## Why agents on this endpoint
+
+- **Fast where it counts.** Self-hosted routes are one model on a dedicated GPU — no shared queue, no multi-tenant noise, MTP speculative decoding on top. Cloud routes go straight to DeepInfra's fastest inference tier.
+- **Honest pricing.** The price in the catalog is the price you're billed — no struck-through list prices, no fine-print margin. Self-hosted routes are at hardware cost-plus.
+- **Cache-aware.** Prompt caching at the proxy layer means long, repetitive agent contexts stop paying full price for the prefix.
+- **Yours to lose.** Self-hosted, small, and boring on purpose. Your key, your spend, your rate limits — all visible in the dashboard.
+- **Talk to the human.** One person runs this infrastructure. Want to explore ideas, shape what comes next, or help keep the infra maintained? Reach Alexandre Girard directly — <a class="text-indigo-600 underline decoration-indigo-200 underline-offset-2" href="https://alexgirard.com">alexgirard.com</a>.
+
 ## Join in three steps {#join}
 
 <div id="join-steps">
@@ -271,7 +279,7 @@ else{status.textContent=(d&&(d.message||d.error))||"Something went wrong, please
 <tr class="border-b border-gray-100 align-top">
 <td class="py-3 pr-4 w-[40%]"><code class="text-indigo-700">qwen3.8-27b</code><div class="text-xs text-gray-500 mt-1">Dedicated single-tenant GPU — RTX 3090 24 GB (standard) or RTX 5090 32 GB (premium) — IQ4_XS GGUF, MTP speculative decoding. Internal exploration team (beta).</div></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">131K</td>
-<td class="py-3 pr-4 text-right" colspan="2"><a href="/#selfhosted" class="inline-block px-2 py-0.5 rounded-full text-xs font-semibold text-indigo-700 bg-indigo-50 border border-indigo-200 hover:bg-indigo-100 transition-colors">contact</a></td>
+<td class="py-3 pr-4 text-right" colspan="2"><a href="#selfhosted" class="inline-block px-2 py-0.5 rounded-full text-xs font-semibold text-indigo-700 bg-indigo-50 border border-indigo-200 hover:bg-indigo-100 transition-colors">contact</a></td>
 <td class="py-3"></td>
 </tr>
 </tbody>
@@ -282,20 +290,36 @@ Models tagged <span class="inline-block px-1.5 py-0.5 rounded bg-gray-100 border
 Self-hosted routes are for the internal exploration team during beta.
 <strong>Prices are USD per 1M tokens</strong> and refresh automatically from DeepInfra.
 ⚠️ The self-hosted GPU is dedicated, but under load Qwen3.8 requests overflow to <strong>rented third-party <a class="text-indigo-600 underline decoration-indigo-200 underline-offset-2" href="https://vast.ai" rel="noopener">VAST.ai</a> capacity</strong>.
-Catalog generated 2026-10-13T05:42:47Z.</p>
+Catalog generated 2026-10-13T05:59:01Z.</p>
 <!-- MODEL-CATALOG:END -->
 
+## Self-hosted GPU (beta) {#selfhosted}
+
+<div class="not-prose my-2">
+<p class="max-w-2xl text-gray-500">
+A dedicated GPU running <code>qwen3.8-27b</code> for you alone — on-demand, hourly cost-plus,
+automatic shutdown when idle. Limited beta slots.
+</p>
+<form action="https://formspree.io/f/mwvwjlyy" method="POST" class="mt-4 max-w-xl bg-white border border-gray-200 rounded-2xl p-6 shadow-sm text-left">
+<input type="hidden" name="_subject" value="Self-hosted (beta) quote request">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+<div><label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+<input name="name" type="text" autocomplete="name" required class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"></div>
+<div><label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+<input name="email" type="email" autocomplete="email" required class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"></div>
+</div>
+<div class="mb-3"><label class="block text-sm font-medium text-gray-700 mb-1">Company <span class="text-gray-400 font-normal">(optional)</span></label>
+<input name="company" type="text" autocomplete="organization" class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"></div>
+<div class="mb-4"><label class="block text-sm font-medium text-gray-700 mb-1">What do you need?</label>
+<textarea name="message" rows="4" required placeholder="Model, typical context size, expected volume, preferred schedule…" class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"></textarea></div>
+<button type="submit" class="w-full bg-indigo-600 text-white py-2.5 px-4 rounded-lg text-sm font-semibold hover:bg-indigo-500 transition-colors">Request a quote</button>
+</form>
+<p class="max-w-xl mt-3 text-xs text-gray-500">You'll get a per-hour quote by email (2× hardware cost, standard or premium tier). The GPU starts on demand and shuts down automatically after 30 minutes idle.</p>
+</div>
 
 
 
 
-## Why agents on this endpoint
-
-- **Fast where it counts.** Self-hosted routes are one model on a dedicated GPU — no shared queue, no multi-tenant noise, MTP speculative decoding on top. Cloud routes go straight to DeepInfra's fastest inference tier.
-- **Honest pricing.** The price in the catalog is the price you're billed — no struck-through list prices, no fine-print margin. Self-hosted routes are at hardware cost-plus.
-- **Cache-aware.** Prompt caching at the proxy layer means long, repetitive agent contexts stop paying full price for the prefix.
-- **Yours to lose.** Self-hosted, small, and boring on purpose. Your key, your spend, your rate limits — all visible in the dashboard.
-- **Talk to the human.** One person runs this infrastructure. Want to explore ideas, shape what comes next, or help keep the infra maintained? Reach Alexandre Girard directly — <a class="text-indigo-600 underline decoration-indigo-200 underline-offset-2" href="https://alexgirard.com">alexgirard.com</a>.
 
 ## How token billing works {#billing}
 
@@ -308,19 +332,6 @@ Catalog generated 2026-10-13T05:42:47Z.</p>
 
 > **Beta:** while we're in beta, new accounts get free credits — no card
 > required. Stripe top-ups go live with the public launch.
-## Honest specs
-
-| | |
-|---|---|
-| Cloud fleet | DeepInfra (api.deepinfra.com) — 12 curated models, see catalog above |
-| Self-hosted | `Qwen3.8-27B-i1-IQ4_XS-GGUF-Smaller` on a dedicated RTX 3090 24 GB (single tenant) |
-| Context | up to 1M tokens (DeepSeek, Gemini, GLM-5.3 routes) |
-| Endpoint | OpenAI-compatible · `https://api.girard-davila.net/api/llm` |
-| Auth | Google SSO → per-user virtual keys |
-| Limits | Per-key RPM and spend caps, configurable |
-
-Questions or want a bigger key budget? <a class="text-indigo-600 underline decoration-indigo-200 underline-offset-2" href="mailto:pi-infra@alexgirard.com">pi-infra@alexgirard.com</a>.
-
 ## Terms & privacy
 
 <div class="not-prose my-2">
