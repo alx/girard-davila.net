@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T06:07:00Z",
+  "generated_at": "2026-10-14T10:25:50Z",
   "endpoint": "https://api.girard-davila.net/api/llm",
   "margin_pct": 20,
   "provider": "DeepInfra (api.deepinfra.com)",
@@ -53,7 +53,8 @@
       "list_out_s": "0.04",
       "our_cache_s": "",
       "features": [],
-      "description": "Meta developed and released the Meta Llama 3.1 family of large language models (LLMs), a collection of pretrained and instruction tuned generative text models in 8B, 70B and 405B sizes"
+      "description": "Meta developed and released the Meta Llama 3.1 family of large language models (LLMs), a collection of pretrained and instruction tuned generative text models in 8B, 70B and 405B sizes",
+      "curated": false
     },
     {
       "name": "gpt-oss-20b",
@@ -79,7 +80,8 @@
       "features": [
         "reasoning"
       ],
-      "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for lower-latency inference. The model is trained in OpenAI\u2019s Harmony response format and supports reasoning level configuration, fine-tuning, and agentic capabilities including function calling, tool use, and structured outputs."
+      "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for lower-latency inference. The model is trained in OpenAI\u2019s Harmony response format and supports reasoning level configuration, fine-tuning, and agentic capabilities including function calling, tool use, and structured outputs.",
+      "curated": false
     },
     {
       "name": "ling-3.0-flash",
@@ -106,7 +108,8 @@
         "prompt cache",
         "reasoning"
       ],
-      "description": "The model prioritizes token efficiency and agentic inference at production scale, stretching what developers can achieve within limited token, latency, and serving-cost budgets."
+      "description": "The model prioritizes token efficiency and agentic inference at production scale, stretching what developers can achieve within limited token, latency, and serving-cost budgets.",
+      "curated": false
     },
     {
       "name": "gemma-3-27b-it",
@@ -132,7 +135,8 @@
       "features": [
         "vision"
       ],
-      "description": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, and chat capabilities, including structured outputs and function calling. Gemma 3 27B is Google's latest open source model, successor to Gemma 2"
+      "description": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, and chat capabilities, including structured outputs and function calling. Gemma 3 27B is Google's latest open source model, successor to Gemma 2",
+      "curated": false
     },
     {
       "name": "gpt-oss-120b",
@@ -158,7 +162,8 @@
       "features": [
         "reasoning"
       ],
-      "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. The model supports configurable reasoning depth, full chain-of-thought access, and native tool use, including function calling, browsing, and structured output generation."
+      "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. The model supports configurable reasoning depth, full chain-of-thought access, and native tool use, including function calling, browsing, and structured output generation.",
+      "curated": false
     },
     {
       "name": "deepseek-v4-flash",
@@ -185,7 +190,8 @@
         "prompt cache",
         "reasoning"
       ],
-      "description": "DeepSeek V4 Flash is an efficiency-focused MoE model with 284B total parameters (13B active) and a 1M-token context window. It's tuned for fast inference and high-throughput use cases while still holding up on reasoning and coding tasks."
+      "description": "DeepSeek V4 Flash is an efficiency-focused MoE model with 284B total parameters (13B active) and a 1M-token context window. It's tuned for fast inference and high-throughput use cases while still holding up on reasoning and coding tasks.",
+      "curated": false
     },
     {
       "name": "glm-5.3-flash",
@@ -213,7 +219,8 @@
         "prompt cache",
         "reasoning"
       ],
-      "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while reducing compute overhead."
+      "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while reducing compute overhead.",
+      "curated": false
     },
     {
       "name": "gemini-2.5-flash",
@@ -240,7 +247,8 @@
         "vision",
         "reasoning"
       ],
-      "description": "Gemini 2.5 Flash is Google's latest thinking model, designed to tackle increasingly complex problems. It's capable of reasoning through their thoughts before responding, resulting in enhanced performance and improved accuracy. Gemini 2.5 Flash: best for balancing reasoning and speed."
+      "description": "Gemini 2.5 Flash is Google's latest thinking model, designed to tackle increasingly complex problems. It's capable of reasoning through their thoughts before responding, resulting in enhanced performance and improved accuracy. Gemini 2.5 Flash: best for balancing reasoning and speed.",
+      "curated": false
     },
     {
       "name": "deepseek-v4.1-flash",
@@ -268,7 +276,8 @@
         "prompt cache",
         "reasoning"
       ],
-      "description": "Introduce DeepSeek-V4.1-Flash, a multimodal Mixture-of-Experts (MoE) model with 552B backbone parameters and support for contexts of up to one million tokens."
+      "description": "Introduce DeepSeek-V4.1-Flash, a multimodal Mixture-of-Experts (MoE) model with 552B backbone parameters and support for contexts of up to one million tokens.",
+      "curated": false
     },
     {
       "name": "qwen3.5-27b",
@@ -295,7 +304,8 @@
         "vision",
         "reasoning"
       ],
-      "description": "Qwen3.5-27B is Alibaba's largest dense Qwen3.5 model, delivering near-frontier quality across reasoning, coding, and instruction following. It features a 262K token context window (extensible to 1M), thinking/reasoning mode, tool calling, multi-token prediction, and support for 201 languages. Best suited for production deployments and complex enterprise tasks requiring top-tier performance."
+      "description": "Qwen3.5-27B is Alibaba's largest dense Qwen3.5 model, delivering near-frontier quality across reasoning, coding, and instruction following. It features a 262K token context window (extensible to 1M), thinking/reasoning mode, tool calling, multi-token prediction, and support for 201 languages. Best suited for production deployments and complex enterprise tasks requiring top-tier performance.",
+      "curated": false
     },
     {
       "name": "kimi-k2.6",
@@ -323,7 +333,8 @@
         "prompt cache",
         "reasoning"
       ],
-      "description": "Kimi K2.6 is an open-source, native multimodal agentic model that advances practical capabilities in long-horizon coding, coding-driven design, proactive autonomous execution, and swarm-based task orchestration."
+      "description": "Kimi K2.6 is an open-source, native multimodal agentic model that advances practical capabilities in long-horizon coding, coding-driven design, proactive autonomous execution, and swarm-based task orchestration.",
+      "curated": false
     },
     {
       "name": "qwen3-coder-480b",
@@ -349,7 +360,8 @@
       "features": [
         "prompt cache"
       ],
-      "description": "Qwen3-Coder-480B-A35B-Instruct is the Qwen3's most agentic code model, featuring Significant Performance on Agentic Coding, Agentic Browser-Use and other foundational coding tasks, achieving results comparable to Claude Sonnet."
+      "description": "Qwen3-Coder-480B-A35B-Instruct is the Qwen3's most agentic code model, featuring Significant Performance on Agentic Coding, Agentic Browser-Use and other foundational coding tasks, achieving results comparable to Claude Sonnet.",
+      "curated": false
     },
     {
       "name": "Qwen3.8-27B-i1-IQ4_XS-GGUF-Smaller",
