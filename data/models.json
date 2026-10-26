@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T10:25:50Z",
+  "generated_at": "2026-10-23T06:10:31Z",
   "endpoint": "https://api.girard-davila.net/api/llm",
   "margin_pct": 20,
   "provider": "DeepInfra (api.deepinfra.com)",
@@ -43,7 +43,7 @@
       "max_in": 120000,
       "list_in": 0.02,
       "list_out": 0.04,
-      "list_cache_read": 0,
+      "list_cache_read": 0.0,
       "our_in": 0.024,
       "our_out": 0.048,
       "our_cache_read": null,
@@ -66,9 +66,9 @@
       "ctx_s": "131K",
       "max_out": 8192,
       "max_in": 120000,
-      "list_in": 0.030000000000000002,
+      "list_in": 0.03,
       "list_out": 0.14,
-      "list_cache_read": 0,
+      "list_cache_read": 0.0,
       "our_in": 0.036,
       "our_out": 0.168,
       "our_cache_read": null,
@@ -93,9 +93,9 @@
       "ctx_s": "131K",
       "max_out": 8192,
       "max_in": 120000,
-      "list_in": 0.060000000000000005,
+      "list_in": 0.06,
       "list_out": 0.18,
-      "list_cache_read": 0.012000000000000002,
+      "list_cache_read": 0.012,
       "our_in": 0.072,
       "our_out": 0.216,
       "our_cache_read": 0.0144,
@@ -105,7 +105,6 @@
       "list_out_s": "0.18",
       "our_cache_s": "0.0144",
       "features": [
-        "prompt cache",
         "reasoning"
       ],
       "description": "The model prioritizes token efficiency and agentic inference at production scale, stretching what developers can achieve within limited token, latency, and serving-cost budgets.",
@@ -123,7 +122,7 @@
       "max_in": 120000,
       "list_in": 0.08,
       "list_out": 0.16,
-      "list_cache_read": 0,
+      "list_cache_read": 0.0,
       "our_in": 0.096,
       "our_out": 0.192,
       "our_cache_read": null,
@@ -132,9 +131,7 @@
       "list_in_s": "0.08",
       "list_out_s": "0.16",
       "our_cache_s": "",
-      "features": [
-        "vision"
-      ],
+      "features": [],
       "description": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, and chat capabilities, including structured outputs and function calling. Gemma 3 27B is Google's latest open source model, successor to Gemma 2",
       "curated": false
     },
@@ -149,8 +146,8 @@
       "max_out": 8192,
       "max_in": 120000,
       "list_in": 0.037,
-      "list_out": 0.16999999999999998,
-      "list_cache_read": 0,
+      "list_out": 0.17,
+      "list_cache_read": 0.0,
       "our_in": 0.0444,
       "our_out": 0.204,
       "our_cache_read": null,
@@ -187,7 +184,6 @@
       "list_out_s": "0.18",
       "our_cache_s": "0.0216",
       "features": [
-        "prompt cache",
         "reasoning"
       ],
       "description": "DeepSeek V4 Flash is an efficiency-focused MoE model with 284B total parameters (13B active) and a 1M-token context window. It's tuned for fast inference and high-throughput use cases while still holding up on reasoning and coding tasks.",
@@ -215,8 +211,6 @@
       "list_out_s": "0.5",
       "our_cache_s": "0.036",
       "features": [
-        "vision",
-        "prompt cache",
         "reasoning"
       ],
       "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while reducing compute overhead.",
@@ -234,7 +228,7 @@
       "max_in": 200000,
       "list_in": 0.3,
       "list_out": 2.5,
-      "list_cache_read": 0,
+      "list_cache_read": 0.0,
       "our_in": 0.36,
       "our_out": 3.0,
       "our_cache_read": null,
@@ -244,10 +238,9 @@
       "list_out_s": "2.5",
       "our_cache_s": "",
       "features": [
-        "vision",
         "reasoning"
       ],
-      "description": "Gemini 2.5 Flash is Google's latest thinking model, designed to tackle increasingly complex problems. It's capable of reasoning through their thoughts before responding, resulting in enhanced performance and improved accuracy. Gemini 2.5 Flash: best for balancing reasoning and speed.",
+      "description": "Gemini 2.5 Flash is Google's latest thinking model, designed to tackle increasingly complex problems. It's capable of reasoning through their thoughts before responding, resulting in enhanced performance and improved accuracy.  Gemini 2.5 Flash: best for balancing reasoning and speed.",
       "curated": false
     },
     {
@@ -272,8 +265,6 @@
       "list_out_s": "0.6",
       "our_cache_s": "0.0072",
       "features": [
-        "vision",
-        "prompt cache",
         "reasoning"
       ],
       "description": "Introduce DeepSeek-V4.1-Flash, a multimodal Mixture-of-Experts (MoE) model with 552B backbone parameters and support for contexts of up to one million tokens.",
@@ -290,8 +281,8 @@
       "max_out": 8192,
       "max_in": 200000,
       "list_in": 0.26,
-      "list_out": 2.5999999999999996,
-      "list_cache_read": 0,
+      "list_out": 2.6,
+      "list_cache_read": 0.0,
       "our_in": 0.312,
       "our_out": 3.12,
       "our_cache_read": null,
@@ -301,7 +292,6 @@
       "list_out_s": "2.6",
       "our_cache_s": "",
       "features": [
-        "vision",
         "reasoning"
       ],
       "description": "Qwen3.5-27B is Alibaba's largest dense Qwen3.5 model, delivering near-frontier quality across reasoning, coding, and instruction following. It features a 262K token context window (extensible to 1M), thinking/reasoning mode, tool calling, multi-token prediction, and support for 201 languages. Best suited for production deployments and complex enterprise tasks requiring top-tier performance.",
@@ -317,7 +307,7 @@
       "ctx_s": "262K",
       "max_out": 8192,
       "max_in": 200000,
-      "list_in": 0.7499999999999999,
+      "list_in": 0.75,
       "list_out": 3.5,
       "list_cache_read": 0.15,
       "our_in": 0.9,
@@ -329,8 +319,6 @@
       "list_out_s": "3.5",
       "our_cache_s": "0.18",
       "features": [
-        "vision",
-        "prompt cache",
         "reasoning"
       ],
       "description": "Kimi K2.6 is an open-source, native multimodal agentic model that advances practical capabilities in long-horizon coding, coding-driven design, proactive autonomous execution, and swarm-based task orchestration.",
@@ -348,7 +336,7 @@
       "max_in": 200000,
       "list_in": 0.3,
       "list_out": 1.0,
-      "list_cache_read": 0.09999999899999999,
+      "list_cache_read": 0.099999999,
       "our_in": 0.36,
       "our_out": 1.2,
       "our_cache_read": 0.12,
@@ -357,9 +345,7 @@
       "list_in_s": "0.3",
       "list_out_s": "1",
       "our_cache_s": "0.12",
-      "features": [
-        "prompt cache"
-      ],
+      "features": [],
       "description": "Qwen3-Coder-480B-A35B-Instruct is the Qwen3's most agentic code model, featuring Significant Performance on Agentic Coding, Agentic Browser-Use and other foundational coding tasks, achieving results comparable to Claude Sonnet.",
       "curated": false
     },

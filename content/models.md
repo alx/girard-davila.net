@@ -18,7 +18,7 @@ aliases:
         </h1>
         <div class="flex flex-col sm:flex-row gap-3 justify-center mt-2">
             <a href="#join" class="px-6 py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition-colors shadow-sm">
-                Get your key - free in beta
+                Get your key - &#8364;3 free
             </a>
             <a href="#models" class="px-6 py-3 rounded-lg bg-white text-gray-800 font-semibold border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors">
                 Browse the models
@@ -58,7 +58,7 @@ aliases:
 
 <div id="join-steps">
 <h3>1. Create an account</h3>
-<p>Sign in with Google at <a class="text-indigo-600 underline decoration-indigo-200 underline-offset-2" href="https://api.girard-davila.net/api/llm/sso/key/generate">api.girard-davila.net</a>. The SSO round-trip issues your personal <strong>virtual key</strong> automatically - no email verification dance, no manual key creation.</p>
+<p>Sign in with Google at <a class="text-indigo-600 underline decoration-indigo-200 underline-offset-2" href="https://provider.girard-davila.net/">provider.girard-davila.net</a>. Your personal <strong>API key</strong> is issued automatically with <strong>&#8364;3 of free credit</strong> - no email verification dance, no manual key creation.</p>
 <h3>2. Connect Pi</h3>
 <pre><code>pi install git:github.com/alx/pi-provider-gd</code></pre>
 <p>Then inside Pi:</p>
@@ -149,14 +149,14 @@ else{status.textContent=(d&&(d.message||d.error))||"Something went wrong, please
 <td class="py-3 pr-4 text-right whitespace-nowrap">131K</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap"><strong>0.072</strong></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap"><strong>0.216</strong></td>
-<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">prompt cache</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
+<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
 </tr>
 <tr class="border-b border-gray-100 align-top">
 <td class="py-3 pr-4 w-[40%]"><code class="text-indigo-700">gemma-3-27b-it</code><div class="text-xs text-gray-500 mt-1">Google Gemma 3 27B with vision. Light multimodal work at commodity prices.</div></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">131K</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap"><strong>0.096</strong></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap"><strong>0.192</strong></td>
-<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">vision</span></td>
+<td class="py-3"></td>
 </tr>
 </tbody>
 </table>
@@ -186,14 +186,14 @@ else{status.textContent=(d&&(d.message||d.error))||"Something went wrong, please
 <td class="py-3 pr-4 text-right whitespace-nowrap">1M</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap"><strong>0.108</strong></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap"><strong>0.216</strong></td>
-<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">prompt cache</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
+<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
 </tr>
 <tr class="border-b border-gray-100 align-top">
 <td class="py-3 pr-4 w-[40%]"><code class="text-indigo-700">glm-5.3-flash</code><div class="text-xs text-gray-500 mt-1">Z.ai multimodal flash: efficient coding + long-horizon agent tasks, 1M context, prompt cache.</div></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">1M</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">0.18</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">0.6</td>
-<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">vision</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">prompt cache</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
+<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
 </tr>
 </tbody>
 </table>
@@ -216,28 +216,28 @@ else{status.textContent=(d&&(d.message||d.error))||"Something went wrong, please
 <td class="py-3 pr-4 text-right whitespace-nowrap">1M</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">0.36</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">3</td>
-<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">vision</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
+<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
 </tr>
 <tr class="border-b border-gray-100 align-top">
 <td class="py-3 pr-4 w-[40%]"><code class="text-indigo-700">deepseek-v4.1-flash</code><div class="text-xs text-gray-500 mt-1">DeepSeek 552B MoE, 1M context, vision + reasoning. The all-round flagship.</div></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">1M</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">0.24</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">0.72</td>
-<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">vision</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">prompt cache</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
+<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
 </tr>
 <tr class="border-b border-gray-100 align-top">
 <td class="py-3 pr-4 w-[40%]"><code class="text-indigo-700">qwen3.5-27b</code><div class="text-xs text-gray-500 mt-1">Largest dense Qwen3.5: near-frontier reasoning and coding, 262K context, vision.</div></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">262K</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">0.312</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">3.12</td>
-<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">vision</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
+<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
 </tr>
 <tr class="border-b border-gray-100 align-top">
 <td class="py-3 pr-4 w-[40%]"><code class="text-indigo-700">kimi-k2.6</code><div class="text-xs text-gray-500 mt-1">Moonshot agentic flagship: long-horizon coding, autonomous execution, swarm tasks.</div></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">262K</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">0.9</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">4.2</td>
-<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">vision</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">prompt cache</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
+<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
 </tr>
 </tbody>
 </table>
@@ -260,7 +260,7 @@ else{status.textContent=(d&&(d.message||d.error))||"Something went wrong, please
 <td class="py-3 pr-4 text-right whitespace-nowrap">262K</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">0.36</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">1.2</td>
-<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">prompt cache</span></td>
+<td class="py-3"></td>
 </tr>
 </tbody>
 </table>
@@ -292,7 +292,7 @@ Models tagged <span class="inline-block px-1.5 py-0.5 rounded bg-gray-100 border
 Self-hosted routes are for the internal exploration team during beta.
 <strong>Prices are USD per 1M tokens</strong> and refresh automatically from DeepInfra.
 ⚠️ The self-hosted GPU is dedicated, but under load Qwen3.8 requests overflow to <strong>rented third-party <a class="text-indigo-600 underline decoration-indigo-200 underline-offset-2" href="https://vast.ai" rel="noopener">VAST.ai</a> capacity</strong>.
-Catalog generated 2026-10-14T10:25:50Z.</p>
+Catalog generated 2026-10-23T06:10:31Z.</p>
 <!-- MODEL-CATALOG:END -->
 
 ## Self-hosted GPU (beta) {#selfhosted}
@@ -332,7 +332,7 @@ automatic shutdown when idle. Limited beta slots.
 3. **You see everything** in the dashboard: spend per model, per key, per day.
    Hard spend caps are enforced, not advisory.
 
-> **Beta:** while we're in beta, new accounts get free credits - no card
+> **Beta:** while we're in beta, new accounts get &#8364;3 of free credit - no card
 > required. Stripe top-ups go live with the public launch.
 ## Terms & privacy
 
