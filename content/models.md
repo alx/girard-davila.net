@@ -116,6 +116,9 @@ else{status.textContent=(d&&(d.message||d.error))||"Something went wrong, please
 
 ## Model catalog {#models}
 
+Full request/response reference, streaming, tools, retries and error codes:
+**[API Reference](/api/)**.
+
 **Service tiers.** Models marked with an indigo `tier:` chip accept an
 optional `"service_tier"` field in the chat-completions request:
 
