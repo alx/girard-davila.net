@@ -152,28 +152,28 @@ it to an untagged model has no effect on price.
 <td class="py-3 pr-4 text-right whitespace-nowrap">131K</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap"><strong>0.024</strong></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap"><strong>0.048</strong></td>
-<td class="py-3"></td>
+<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">structured outputs</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">tool calling</span></td>
 </tr>
 <tr class="border-b border-gray-100 align-top">
 <td class="py-3 pr-4 w-[40%]"><code class="text-indigo-700">gpt-oss-20b</code><div class="text-xs text-gray-500 mt-1">OpenAI's open-weight MoE (3.6B active) with reasoning. Fast answers on a budget.</div></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">131K</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap"><strong>0.036</strong></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap"><strong>0.168</strong></td>
-<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
+<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">tool calling</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">structured outputs</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-indigo-700 bg-indigo-50 border border-indigo-200">tier: priority</span></td>
 </tr>
 <tr class="border-b border-gray-100 align-top">
 <td class="py-3 pr-4 w-[40%]"><code class="text-indigo-700">ling-3.0-flash</code><div class="text-xs text-gray-500 mt-1">Token-efficient agentic model tuned for low-latency tool-calling workloads.</div></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">131K</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap"><strong>0.072</strong></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap"><strong>0.216</strong></td>
-<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">prompt cache</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
+<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">native tool calling</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">tool calling</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">structured outputs</span></td>
 </tr>
 <tr class="border-b border-gray-100 align-top">
 <td class="py-3 pr-4 w-[40%]"><code class="text-indigo-700">gemma-3-27b-it</code><div class="text-xs text-gray-500 mt-1">Google Gemma 3 27B with vision. Light multimodal work at commodity prices.</div></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">131K</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap"><strong>0.096</strong></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap"><strong>0.192</strong></td>
-<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">vision</span></td>
+<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">tool calling</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">vision</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">structured outputs</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">native tool calling</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-indigo-700 bg-indigo-50 border border-indigo-200">tier: priority</span></td>
 </tr>
 </tbody>
 </table>
@@ -196,21 +196,21 @@ it to an untagged model has no effect on price.
 <td class="py-3 pr-4 text-right whitespace-nowrap">131K</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap"><strong>0.0444</strong></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap"><strong>0.204</strong></td>
-<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
+<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">tool calling</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">structured outputs</span></td>
 </tr>
 <tr class="border-b border-gray-100 align-top">
 <td class="py-3 pr-4 w-[40%]"><code class="text-indigo-700">deepseek-v4-flash</code><div class="text-xs text-gray-500 mt-1">DeepSeek 284B MoE (13B active), 1M context. Fast, strong reasoning, long agentic sessions.</div></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">1M</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap"><strong>0.108</strong></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap"><strong>0.216</strong></td>
-<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">prompt cache</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
+<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">structured outputs</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">tool calling</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">native tool calling</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-indigo-700 bg-indigo-50 border border-indigo-200">tier: priority</span></td>
 </tr>
 <tr class="border-b border-gray-100 align-top">
 <td class="py-3 pr-4 w-[40%]"><code class="text-indigo-700">glm-5.3-flash</code><div class="text-xs text-gray-500 mt-1">Z.ai multimodal flash: efficient coding + long-horizon agent tasks, 1M context, prompt cache.</div></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">1M</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">0.18</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">0.6</td>
-<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">vision</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">prompt cache</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
+<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">native tool calling</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">tool calling</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">structured outputs</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">vision</span></td>
 </tr>
 </tbody>
 </table>
@@ -233,28 +233,28 @@ it to an untagged model has no effect on price.
 <td class="py-3 pr-4 text-right whitespace-nowrap">1M</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">0.36</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">3</td>
-<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">vision</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
+<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">tool calling</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">vision</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">structured outputs</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">native tool calling</span></td>
 </tr>
 <tr class="border-b border-gray-100 align-top">
 <td class="py-3 pr-4 w-[40%]"><code class="text-indigo-700">deepseek-v4.1-flash</code><div class="text-xs text-gray-500 mt-1">DeepSeek 552B MoE, 1M context, vision + reasoning. The all-round flagship.</div></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">1M</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">0.24</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">0.72</td>
-<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">vision</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">prompt cache</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-indigo-700 bg-indigo-50 border border-indigo-200">tier: priority</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-indigo-700 bg-indigo-50 border border-indigo-200">tier: flex</span></td>
+<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">structured outputs</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">native tool calling</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">tool calling</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">vision</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-indigo-700 bg-indigo-50 border border-indigo-200">tier: priority</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-indigo-700 bg-indigo-50 border border-indigo-200">tier: flex</span></td>
 </tr>
 <tr class="border-b border-gray-100 align-top">
 <td class="py-3 pr-4 w-[40%]"><code class="text-indigo-700">qwen3.5-27b</code><div class="text-xs text-gray-500 mt-1">Largest dense Qwen3.5: near-frontier reasoning and coding, 262K context, vision.</div></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">262K</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">0.312</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">3.12</td>
-<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">vision</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
+<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">structured outputs</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">tool calling</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">native tool calling</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">vision</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-indigo-700 bg-indigo-50 border border-indigo-200">tier: priority</span></td>
 </tr>
 <tr class="border-b border-gray-100 align-top">
 <td class="py-3 pr-4 w-[40%]"><code class="text-indigo-700">kimi-k2.6</code><div class="text-xs text-gray-500 mt-1">Moonshot agentic flagship: long-horizon coding, autonomous execution, swarm tasks.</div></td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">262K</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">0.9</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">4.2</td>
-<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">vision</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">prompt cache</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span></td>
+<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">structured outputs</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">reasoning</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">tool calling</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">vision</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">native tool calling</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-indigo-700 bg-indigo-50 border border-indigo-200">tier: priority</span></td>
 </tr>
 </tbody>
 </table>
@@ -277,7 +277,7 @@ it to an untagged model has no effect on price.
 <td class="py-3 pr-4 text-right whitespace-nowrap">262K</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">0.36</td>
 <td class="py-3 pr-4 text-right whitespace-nowrap">1.2</td>
-<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">prompt cache</span></td>
+<td class="py-3"><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">tool calling</span><span class="inline-block mr-2 my-0.5 px-2 py-0.5 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200">structured outputs</span></td>
 </tr>
 </tbody>
 </table>
@@ -309,7 +309,7 @@ Models tagged <span class="inline-block px-1.5 py-0.5 rounded bg-gray-100 border
 Self-hosted routes are for the internal exploration team during beta.
 <strong>Prices are USD per 1M tokens</strong> and refresh automatically from DeepInfra.
 ⚠️ The self-hosted GPU is dedicated, but under load Qwen3.8 requests overflow to <strong>rented third-party <a class="text-indigo-600 underline decoration-indigo-200 underline-offset-2" href="https://vast.ai" rel="noopener">VAST.ai</a> capacity</strong>.
-Catalog generated 2026-11-04T06:51:47Z.</p>
+Catalog generated 2026-11-04T07:21:03Z.</p>
 <!-- MODEL-CATALOG:END -->
 
 ## Self-hosted GPU (beta) {#selfhosted}
