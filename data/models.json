@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T07:21:03Z",
+  "generated_at": "2026-11-06T18:06:01Z",
   "endpoint": "https://api.girard-davila.net/api/llm",
   "margin_pct": 20,
   "provider": "DeepInfra (api.deepinfra.com)",
@@ -285,10 +285,10 @@
     },
     {
       "name": "deepseek-v4.1-flash",
-      "provider_id": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "provider_id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
       "source": "deepinfra",
       "category": "flagship",
-      "blurb": "DeepSeek 552B MoE, 1M context, vision + reasoning. The all-round flagship.",
+      "blurb": "DeepSeek 552B MoE, 1M context, vision + reasoning. The all-round flagship. Pinned to the -1017 minor update (better reasoning/coding/agentic/vision, faster, same price).",
       "ctx": 1048576,
       "ctx_s": "1M",
       "max_out": 8192,
@@ -309,13 +309,13 @@
       "list_out_s": "0.6",
       "our_cache_s": "0.0072",
       "features": [
-        "structured outputs",
+        "vision",
         "reasoning",
         "native tool calling",
-        "tool calling",
-        "vision"
+        "structured outputs",
+        "tool calling"
       ],
-      "description": "Introduce DeepSeek-V4.1-Flash, a multimodal Mixture-of-Experts (MoE) model with 552B backbone parameters and support for contexts of up to one million tokens.",
+      "description": "DeepSeek-V4.1-Flash-1017 is a minor update to DeepSeek-V4.1-Flash, delivering substantial improvements across reasoning, coding, agentic tasks, and visual benchmarks. Alongside these gains, the model reduces task execution time and output length, enabling users to complete tasks faster and at lower cost and advancing the performance\u2013cost Pareto frontier across multiple agent harnesses.",
       "curated": false
     },
     {
