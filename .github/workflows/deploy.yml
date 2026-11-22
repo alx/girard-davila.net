@@ -27,6 +27,12 @@ jobs:
           extended: true
       - name: Build
         run: hugo --minify
+      # The map book's page PNGs + PDF are not in git (a 7.6 MB commit killed
+      # the deploy). Pull them into public/book/ before the artifact upload.
+      # NOTE: ubuntu-latest has no tailnet route, so this step is what decides
+      # whether the book can ship this way at all.
+      - name: Fetch book assets
+        run: bash scripts/fetch-book-assets.sh public/book
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
