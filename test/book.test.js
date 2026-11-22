@@ -7,10 +7,11 @@
 const { test, expect } = require('@playwright/test');
 
 const WIDTHS = [1440, 768, 375];
-// Maps in the published edition, not the manifest: the book ships as the brief
-// edition (Bind + Haven), so the site only has these pages. Add the rest back
-// here when a full edition is published.
-const MAP_SLUGS = ['bind', 'haven'];
+// Maps in the published edition: all 13 official maps, one full A4 page each.
+const MAP_SLUGS = [
+  'abyss', 'ascent', 'bind', 'breeze', 'corrode', 'fracture',
+  'haven', 'icebox', 'lotus', 'pearl', 'split', 'summit', 'sunset'
+];
 
 test.describe('Valorant map book landing page', () => {
   test('no horizontal scroll, exactly one h1, at every width', async ({ page }) => {
@@ -59,15 +60,14 @@ test.describe('Valorant map book landing page', () => {
         Array.from(document.images).filter((i) => i.complete && i.naturalWidth === 0).length
       );
       expect(broken, `${slug} broken images`).toBe(0);
-      // Read from the live DOM, not the attribute: the browser resolves
-      // "../pages/p-03.png" against the page URL, the same way the served
-      // file would be resolved by any other browser.
+      // One full-page plate per map. Read from the live DOM so the browser
+      // resolves the URL exactly as a visitor's would.
       const sheetSrcs = await page.evaluate(() =>
         Array.from(document.querySelectorAll('.sheet img')).map((i) =>
           new URL(i.getAttribute('src'), document.baseURI).pathname
         )
       );
-      expect(sheetSrcs.length, `${slug} sheets`).toBe(4);
+      expect(sheetSrcs.length, `${slug} sheets`).toBe(1);
       sheetSrcs.forEach((src) => expect(src).toMatch(/^\/book\/pages\/p-\d+\.png$/));
     }
   });
