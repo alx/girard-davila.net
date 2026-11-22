@@ -7,10 +7,10 @@
 const { test, expect } = require('@playwright/test');
 
 const WIDTHS = [1440, 768, 375];
-// Maps in the published edition, not the manifest: the book ships as the short
-// edition (one map per site count), so the site only has these pages. Add the
-// rest back here when a full edition is published.
-const MAP_SLUGS = ['abyss', 'haven'];
+// Maps in the published edition, not the manifest: the book ships as the brief
+// edition (Bind + Haven), so the site only has these pages. Add the rest back
+// here when a full edition is published.
+const MAP_SLUGS = ['bind', 'haven'];
 
 test.describe('Valorant map book landing page', () => {
   test('no horizontal scroll, exactly one h1, at every width', async ({ page }) => {
