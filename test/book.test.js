@@ -7,10 +7,10 @@
 const { test, expect } = require('@playwright/test');
 
 const WIDTHS = [1440, 768, 375];
-const MAP_SLUGS = [
-  'abyss', 'ascent', 'bind', 'breeze', 'corrode', 'fracture',
-  'haven', 'icebox', 'lotus', 'pearl', 'split', 'summit', 'sunset'
-];
+// Maps in the published edition, not the manifest: the book ships as the short
+// edition (one map per site count), so the site only has these pages. Add the
+// rest back here when a full edition is published.
+const MAP_SLUGS = ['abyss', 'haven'];
 
 test.describe('Valorant map book landing page', () => {
   test('no horizontal scroll, exactly one h1, at every width', async ({ page }) => {
@@ -48,7 +48,7 @@ test.describe('Valorant map book landing page', () => {
     bookLinks.forEach((h) => expect(h).toMatch(/^\/book\//));
   });
 
-  test('all 13 map pages load with their images', async ({ page }) => {
+  test('every published map page loads with its images', async ({ page }) => {
     for (const slug of MAP_SLUGS) {
       const res = await page.goto(`/book/map/${slug}.html`, { waitUntil: 'load' });
       expect(res.status(), `${slug} status`).toBe(200);
