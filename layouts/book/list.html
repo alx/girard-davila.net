@@ -1,0 +1,73 @@
+{{ define "main" }}
+
+<!-- Landing page for the Valorant training map book (generic list.html would
+     title-only the directory; the actual pages live in static/book/). -->
+<section class="pt-28 pb-10 bg-white">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+        <p class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-3">Tactical reference · edition I</p>
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-900 tracking-tight leading-none">
+            VALORANT TRAINING<br>MAP BOOK
+        </h1>
+        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+            Thirteen official maps, four A4 sheets each: an overview plate with a metric scale bar,
+            an attack sheet, a defence sheet, and a 10&times;10 drill grid for call-out practice.
+            Pure black and white, generated from open map geometry &mdash; built to be printed.
+        </p>
+        <div class="flex flex-wrap gap-3 text-sm text-gray-500 mb-8">
+            <span class="border border-gray-200 rounded px-3 py-1">13 maps · 55 sheets</span>
+            <span class="border border-gray-200 rounded px-3 py-1">A4 · 210&times;297 mm</span>
+            <span class="border border-gray-200 rounded px-3 py-1">Grayscale only</span>
+            <span class="border border-gray-200 rounded px-3 py-1">Free · not for sale</span>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 mb-10">
+            <a href="/book/tactical-map-book.pdf"
+               class="inline-block bg-gray-900 text-white px-8 py-3 rounded-md font-medium hover:bg-gray-700 transition-colors duration-200">
+                Download the PDF (A4)
+            </a>
+            <a href="/book/history.html"
+               class="inline-block border border-gray-300 text-gray-700 px-8 py-3 rounded-md font-medium hover:border-gray-500 hover:text-gray-900 transition-colors duration-200">
+                Build history
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="py-12 bg-gray-50 border-t border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 tracking-tight">The maps</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {{ range $slug := slice "abyss" "ascent" "bind" "breeze" "corrode" "fracture" "haven" "icebox" "lotus" "pearl" "split" "summit" "sunset" }}
+            <a href="/book/map/{{ $slug }}.html"
+               class="block border border-gray-200 rounded-lg overflow-hidden bg-white hover:border-gray-400 transition-colors duration-200">
+                <span class="block capitalize text-lg font-semibold text-gray-900 px-5 py-4">{{ $slug }}</span>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<section id="legal" class="py-12 bg-white border-t border-gray-200">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-sm text-gray-600 leading-relaxed">
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">Licence</h2>
+        <p class="mb-3">
+            <strong>Fan-made training aid &mdash; free, not for sale.</strong>
+            No ads, no paywall, no sales. Map layouts are derived from Valorant, a game owned by
+            Riot Games, Inc. This book is not endorsed by, sponsored by, or affiliated with Riot Games.
+            VALORANT and all associated assets are trademarks or registered trademarks of Riot Games, Inc.
+        </p>
+        <p class="mb-3">
+            Map geometry and call-out artwork come from the open-source project
+            <a class="underline hover:text-gray-900" href="https://github.com/SunkenInTime/icarus">Icarus</a>,
+            Copyright 2026 Dara Adedeji, licensed under the Apache License 2.0. The files were modified:
+            recoloured to grayscale, re-laid out for A4 print, and annotated with coordinate grids for
+            training drills. Apache-2.0 grants no rights in Riot Games' marks (License §6).
+        </p>
+        <p>
+            Riot's fan-content policy (&ldquo;Legal Jibber Jabber&rdquo;, August 2018) permits this work only
+            as a free, non-commercial community project. If a rights holder objects, this book is withdrawn
+            on request.
+        </p>
+    </div>
+</section>
+
+{{ end }}
