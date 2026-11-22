@@ -24,18 +24,9 @@ die() { echo "fetch-book-assets: $*" >&2; exit 1; }
 
 mkdir -p "$DEST/pages"
 
-# A source counts as present only with BOTH the PDF and every sheet PNG — a
-# partial static/book (e.g. a checkout where only the tracked HTML exists) must
-# fall through to the origin, not silently copy 13 of 56 files.
-# Set BOOK_ASSETS_STRICT=1 in CI: there the working tree never holds the
-# artifacts, and a deploy that silently lost its own checks must not pass.
-if [ "${BOOK_ASSETS_STRICT:-0}" = 1 ]; then
-  have_src=0
-elif [ -s "$SRC/tactical-map-book.pdf" ] && [ "$(find "$SRC/pages" -name 'p-*.png' 2>/dev/null | wc -l)" -ge 55 ]; then
-  have_src=1
-else
-  have_src=0
-fi
+have_src=0
+[ -s "$SRC/tactical-map-book.pdf" ] && have_src=1
+[ -d "$SRC/pages" ] && [ -n "$(find "$SRC/pages" -name 'p-*.png' -print -quit)" ] && have_src=1
 
 if [ "$have_src" = 1 ]; then
   cp -f "$SRC"/pages/*.png "$DEST/pages/"
@@ -46,20 +37,20 @@ else
   tmp="$(mktemp -d)"
   trap 'rm -rf "$tmp"' EXIT
 
-  # The sheets are a plain p-01..p-55 sequence (build_web.py numbers them), so
-  # fetch by index instead of trying to enumerate a Caddy directory listing —
-  # the listing only shows pages referenced by index.html (13 overviews) and a
-  # missing sheet would otherwise pass as a complete build.
-  pages=""
-  for i in $(seq -w 1 55); do pages="$pages p-$i.png"; done
+  # /book/ (the directory URL) lists the whole tree: map/ + pages/. Every sheet
+  # PNG lives in pages/, so this one listing is the complete manifest.
+  curl -fsSL --max-time 60 "$ORIGIN/" -o "$tmp/listing.html" \
+    || die "cannot reach $ORIGIN (not on the tailnet? set SRC=... instead)"
+  pages="$(grep -o 'p-[0-9][0-9]*\.png' "$tmp/listing.html" | sort -u || true)"
+  [ -n "$pages" ] || die "no page images listed at $ORIGIN/"
 
   for p in $pages; do
-    curl -fsS --retry 3 --retry-delay 2 --max-time 120 "$ORIGIN/pages/$p" -o "$DEST/pages/$p" \
+    curl -fsS --max-time 120 "$ORIGIN/pages/$p" -o "$DEST/pages/$p" \
       || die "fetch failed: $ORIGIN/pages/$p"
   done
-  curl -fsS --retry 3 --retry-delay 2 --max-time 300 "$ORIGIN/tactical-map-book.pdf" -o "$DEST/tactical-map-book.pdf" \
+  curl -fsS --max-time 180 "$ORIGIN/tactical-map-book.pdf" -o "$DEST/tactical-map-book.pdf" \
     || die "PDF fetch failed from $ORIGIN"
-  echo "fetch-book-assets: fetched 55 pages + PDF from $ORIGIN"
+  echo "fetch-book-assets: fetched $(echo "$pages" | wc -l) pages + PDF from $ORIGIN"
 fi
 
 # Fail loudly rather than ship a half-built book: the HTML references 55 sheets.

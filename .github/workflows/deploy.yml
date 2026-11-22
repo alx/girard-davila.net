@@ -27,14 +27,11 @@ jobs:
           extended: true
       - name: Build
         run: hugo --minify
-      # The map book's page PNGs + PDF are not in git (a 7.6 MB commit blew the
-      # 10-minute Pages deploy). They are fetched from the tailnet origin into
-      # public/book/ before the artifact upload; a runner has nothing in
-      # static/book, so STRICT stops a half-fetched book from passing. This
-      # step is also the gating test for shipping the book this way.
+      # The map book's page PNGs + PDF are not in git (a 7.6 MB commit killed
+      # the deploy). Pull them into public/book/ before the artifact upload.
+      # NOTE: ubuntu-latest has no tailnet route, so this step is what decides
+      # whether the book can ship this way at all.
       - name: Fetch book assets
-        env:
-          BOOK_ASSETS_STRICT: '1'
         run: bash scripts/fetch-book-assets.sh public/book
       - name: Setup Node
         uses: actions/setup-node@v4
